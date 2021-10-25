@@ -306,6 +306,7 @@ const btoa: (bin: string) => string =
   ((bin) => globalThis.Buffer.from(bin, "binary").toString("base64"));
 function base64FromBytes(arr: Uint8Array): string {
   const bin: string[] = [];
+  // @ts-ignore: 
   for (const byte of arr) {
     bin.push(String.fromCharCode(byte));
   }
